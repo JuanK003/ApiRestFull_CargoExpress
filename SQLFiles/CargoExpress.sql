@@ -60,7 +60,7 @@ CREATE INDEX `IX_Relationship5` ON `Usuarios` (`IdSucursales`)
 CREATE TABLE `Rol`
 (
   `IdRol` Int NOT NULL AUTO_INCREMENT,
-  `Rol` Varchar(100) NOT NULL,
+  `Cargo` Varchar(100) NOT NULL,
   PRIMARY KEY (`IdRol`)
 )
 ;
