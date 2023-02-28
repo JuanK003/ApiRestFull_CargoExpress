@@ -2,9 +2,9 @@ import express from "express"
 import cors from 'cors'
 import db from "./DataBase/db.js"
 import departamentosRoutes from './routes/routeDepartamento.js'
-//import rolesRoutes from './Routes/routeRol.js'
-//import empleadoRoutes from './Routes/routeEmpleado.js'
-//import productoRoutes from './Routes/routeProducto.js'
+import muniRoutes from './routes/routeMunicipio.js'
+import rolRoutes from './routes/routeRol.js'
+import sucursalRoutes from './routes/routeSucursal.js'
 //import ventaRoutes from './Routes/routeVenta.js'
 
 const app = express()
@@ -12,9 +12,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use('/departamento', departamentosRoutes)
-//app.use('/roles', rolesRoutes)
-//app.use('/empleados', empleadoRoutes)
-//app.use('/productos', productoRoutes)
+app.use('/municipio', muniRoutes)
+app.use('/rol', rolRoutes)
+app.use('/sucursal', sucursalRoutes)
 //app.use('/ventas', ventaRoutes)
 
 try {
