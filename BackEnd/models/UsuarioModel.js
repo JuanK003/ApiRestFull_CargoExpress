@@ -7,9 +7,9 @@ const UsuarioModel = db.define('Usuarios', {
    Telefono: {type: DataTypes.STRING},
    Direccion: {type: DataTypes.STRING},
    email: {type: DataTypes.STRING},
-   IdRol: {type: DataTypes.INTEGER},
+   Id: {type: DataTypes.INTEGER},
    CUI: {type: DataTypes.STRING},
-   IdSucursal: {type: DataTypes.INTEGER}
+   Id: {type: DataTypes.INTEGER}
 });
 
 export default UsuarioModel

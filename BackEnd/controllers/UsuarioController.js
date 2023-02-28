@@ -1,13 +1,13 @@
-import  SucursalModel  from "../models/SucursalModel.js";
+import  UsuarioModel  from "../models/UsuarioModel.js";
 
 //Metodos para el crud
 
 //Mostrar todos los registros
 
-export const getAllSucursal = async (req, res) => {
+export const getAllUsuario = async (req, res) => {
     try {
-        const sucursales = await SucursalModel.findAll()
-        res.json(sucursales)
+        const usuarios = await UsuarioModel.findAll()
+        res.json(usuarios)
     } catch (error) {
         res.json({message: error.message})        
     }
@@ -15,20 +15,20 @@ export const getAllSucursal = async (req, res) => {
 
 //Mostrar un registro
 
-export const getSucursal = async(req, res)=>{
+export const getUsuario = async(req, res)=>{
     try {
-        const sucursal = await SucursalModel.findAll({
+        const usuario = await UsuarioModel.findAll({
             where:{id:req.params.id}
         })
-        res.json(sucursal[0])
+        res.json(usuario[0])
     } catch (error) {
         res.json({message: error.message})
     }
 }
 //Crear un registro
-export const createSucursal = async (req, res)=>{
+export const createUsuario = async (req, res)=>{
     try {
-        await SucursalModel.create(req.body)
+        await UsuarioModel.create(req.body)
         res.json({"message":"Registro creado correctamente"})
     } catch (error) {
         res.json({message: error.message})
@@ -36,9 +36,9 @@ export const createSucursal = async (req, res)=>{
 }
 
 //Actrualizar un registro
-export const updateSucursal = async (req, res)=>{
+export const updateUsuario = async (req, res)=>{
     try {
-        await SucursalModel.update(req.body,{
+        await UsuarioModel.update(req.body,{
             where:{id:req.params.id}
         })
         res.json({
@@ -49,9 +49,9 @@ export const updateSucursal = async (req, res)=>{
     }
 }
 //Eliminar un registro
-export const deleteSucursal = async (req, res)=>{
+export const deleteUsuario = async (req, res)=>{
     try {
-        await SucursalModel.destroy({
+        await UsuarioModel.destroy({
             where: {id: req.params.id}
         })
         res.json({

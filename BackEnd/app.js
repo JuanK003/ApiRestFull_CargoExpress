@@ -5,7 +5,7 @@ import departamentosRoutes from './routes/routeDepartamento.js'
 import muniRoutes from './routes/routeMunicipio.js'
 import rolRoutes from './routes/routeRol.js'
 import sucursalRoutes from './routes/routeSucursal.js'
-//import ventaRoutes from './Routes/routeVenta.js'
+import usuarioRoutes from './routes/routeUsuarios.js'
 
 const app = express()
 
@@ -15,7 +15,7 @@ app.use('/departamento', departamentosRoutes)
 app.use('/municipio', muniRoutes)
 app.use('/rol', rolRoutes)
 app.use('/sucursal', sucursalRoutes)
-//app.use('/ventas', ventaRoutes)
+app.use('/usuario', usuarioRoutes)
 
 try {
     await db.authenticate()
